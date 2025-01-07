@@ -50,7 +50,7 @@ const DeleteBook = () => {
           <h3 className="text-md font-semibold text-gray-700">Books List</h3>
           {loading ? (
             <p>Loading books...</p>
-          ) : books.length > 0 ? (
+          ) : books?.length > 0 ? (
             <ul className="mt-2 list-disc pl-6">
               {books.map((book) => (
                 <li key={book._id} className="text-sm text-gray-600 border border-b-2 flex p-2 justify-between items-center">

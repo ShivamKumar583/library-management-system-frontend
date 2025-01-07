@@ -46,7 +46,7 @@ const BorrowBook = () => {
         {/* Available Books List */}
         {loading ? (
           <p>Loading available books...</p>
-        ) : availableBooks.length > 0 ? (
+        ) : availableBooks?.length > 0 ? (
           <ul className="mt-6 list-disc pl-6 ">
             {availableBooks.map((book) => (
               <li key={book._id} className="text-sm p-1 text-gray-600 flex justify-between items-center border-b-2 border">

@@ -63,7 +63,7 @@ const ReturnBookPage = () => {
             className="mt-2 p-2 w-full border border-gray-300 rounded"
           >
             <option value="">--Select Book--</option>
-            {borrowedBooks.length > 0 ? (
+            {borrowedBooks?.length > 0 ? (
               borrowedBooks.map((book) => (
                 <option key={book.bookId} value={book.bookId}>
                   {book.title} by {book.author}

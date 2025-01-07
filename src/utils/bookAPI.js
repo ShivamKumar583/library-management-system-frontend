@@ -3,7 +3,7 @@ import { apiConnector } from "./ApiConnector";
 import {  setToken } from "../slices/authSlice"
 import {  setUser } from "../slices/profileSlice"
 
-const BASE_URL = "http://localhost:4000/api/v1";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const GET_BOOKS_BORROWED_BY_USER_API = BASE_URL + "/books/borrowedByUser";
 const GET_BOOKS_BY_AVAILABLITY_API = BASE_URL + "/books/getAllBooksByAvailability";
