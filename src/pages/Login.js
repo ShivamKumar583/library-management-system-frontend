@@ -83,7 +83,7 @@ const Login = () => {
             type="submit"
             className="mt-6 w-full rounded-lg bg-blue-500 py-3 text-white font-medium hover:bg-blue-600"
           >
-            Sign In
+            Log In
           </button>
         </form>
       </div>
