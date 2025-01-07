@@ -30,7 +30,7 @@ export function getAllBooksBorrowedByUser(userId,token,navigate) {
       }
       return response.data.data;
     } catch (error) {
-      toast.error("Error while fetching the data for borrowed books");
+      console.log("Error while fetching the data for borrowed books");
     }
   };
 }
@@ -48,7 +48,7 @@ export function getLastTransactionByUser(userId,token,navigate) {
       }
       return response.data.data;
     } catch (error) {
-      toast.error("Error while fetching the data for last transaction");
+      console.log("Error while fetching the data for last transaction");
     }
   };
 }
@@ -67,7 +67,7 @@ export function getAllBooksByAvailability(token,navigate) {
       }
       return response.data.books;
     } catch (error) {
-      toast.error("Error while fetching the data for last transaction");
+      console.log("Error while fetching the data for last transaction");
     }
   };
 }
@@ -92,7 +92,7 @@ export function returnBook(bookId,userId,token,navigate) {
       else toast.success("Book returned successfully")
       return response;
     } catch (error) {
-      toast.error("Error while fetching the data for last transaction");
+      console.log("Error while fetching the data for last transaction");
     }
   };
 }
@@ -113,7 +113,7 @@ export function borrowBook(bookId,userId,token,navigate) {
       }
       else toast.success("Book borrowed successfully")
     } catch (error) {
-      toast.error("Error while fetching the data for last transaction");
+      console.log("Error while fetching the data for last transaction");
     }
   };
 }
@@ -137,7 +137,7 @@ export function getTotalNumberOfBooks(token,navigate) {
         }
         return response.data.totalBooks;
       } catch (error) {
-        toast.error("Error while fetching the data for last transaction");
+        console.log("Error while fetching the data for last transaction");
       }
     };
   }
@@ -159,7 +159,7 @@ export function addBook(newBook,token,navigate) {
           throw new Error(response.data.message);
         }
       } catch (error) {
-        toast.error("Error while adding the book");
+        console.log("Error while adding the book");
       }
     };
   }
@@ -178,7 +178,7 @@ export function getAllBooks(token,navigate) {
         }
         return response.data.books;
       } catch (error) {
-        toast.error("Error while fetching the data for last transaction");
+        console.log("Error while fetching the data for last transaction");
       }
     };
   }
@@ -198,7 +198,7 @@ export function deleteBook(bookId,token,navigate) {
         }
         else toast.success("Book Deleted Successfully")
       } catch (error) {
-        toast.error("Error while adding the book");
+        console.log("Error while adding the book");
       }
     };
   }

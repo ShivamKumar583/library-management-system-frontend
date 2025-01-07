@@ -17,6 +17,7 @@ const UserDashboard = () => {
 
 
   useEffect(() => {
+    if(!user.id) return;
     const fetchBooks = async () => {
       try {
         const books = await dispatch(getAllBooksBorrowedByUser(user.id, token));
@@ -32,7 +33,7 @@ const UserDashboard = () => {
     };
   
     fetchBooks(); 
-  }, []); 
+  }, [user.id]); 
   
 
 
