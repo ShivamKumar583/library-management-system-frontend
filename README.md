@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Frontend - Library Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the **frontend** application for the Library Management System. It is built using **React.js** and provides an interface for users and administrators to interact with the library system.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User login and registration
+- View available books and borrow them
+- View borrowed books and return them
+- Admin dashboard to manage books (add and delete)
+- Real-time updates of borrowed and available books
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React.js** for building the user interface
+- **Redux** for state management
+- **Tailwind CSS** for styling
+- **React Router** for navigation between pages
+- **Axios** for making API requests to the backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+Follow the steps below to set up the frontend locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/yourusername/frontend-repo.git
+   cd frontend-repo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Create .env file:
+    You will need to create a .env file in the root directory with the following content:
+    ``env
+    REACT_APP_API_URL=http://localhost:4000/api/v1
 
-### `npm run eject`
+    Replace http://localhost:5000/api with the actual API URL where your backend is hosted.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
+    ```bash
+    npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Your frontend application will be running on http://localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Folder Structure
+/src
+  /components     # Reusable components (buttons, input fields, etc.)
+  /reducer        # Redux store
+  /slices         # Actions, and reducers
+  /pages          # Individual pages (Home, Login, Dashboard, etc.)
+  /utils          # Utility functions (API calls, helpers, etc.)
+  /App.js         # Main app component
+  /index.js       # Entry point for React
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# API Endpoints
+    The frontend interacts with the following backend API endpoints:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    POST /api/v1/users/login - User login
+    POST /api/v1/users/registe - User registration
+    GET /api/v1/books/getAllBooks - Get all books
+    GET /api/v1/books/borrowedByUser - Get borrowed books for the user
+    POST /api/v1/books/borrow/:bookId - Borrow a book
+    POST /api/v1/books/return/:bookId - Return a borrowed book
+    POST /api/v1/books/add (Admin only) - Add a new book
+    DELETE /api/v1/books/:bookId (Admin only) - Delete a book
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Development
+    To contribute or make changes, follow these steps:
 
-### Analyzing the Bundle Size
+    Fork the repository and clone it to your local machine.
+    Create a new branch for your changes.
+    Make your changes and commit them.
+    Push your changes to your forked repository.
+    Create a Pull Request for your changes to be reviewed and merged.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
